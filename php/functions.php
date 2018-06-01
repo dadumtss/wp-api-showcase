@@ -25,7 +25,7 @@ function CallAPI($method, $url, $data = false)
 
 	// Optional Authentication:
 	curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-	curl_setopt($curl, CURLOPT_USERPWD, "username:password");
+	curl_setopt($curl, CURLOPT_USERPWD, $_SESSION['username'].":".$_SESSION['pw']);
 
 	curl_setopt($curl, CURLOPT_URL, $url);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -37,6 +37,5 @@ function CallAPI($method, $url, $data = false)
 	return $result;
 }
 
-function getPosts(){
-	return json_decode(CallAPI('GET', API_URL.'/types'));
-}
+require_once 'classes/Greeting.php';
+require_once 'classes/Login.php';
