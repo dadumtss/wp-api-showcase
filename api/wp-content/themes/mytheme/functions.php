@@ -11,10 +11,10 @@ function create_posttype() {
 			),
 			'public' => true,
 			'has_archive' => true,
+			'show_in_rest' => true,
 			'rewrite' => array('slug' => 'greeting'),
 		)
 	);
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
-
