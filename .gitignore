@@ -65,3 +65,5 @@ api/wp-content/languages/plugins/akismet-de_DE.mo
 .idea/wp-showcase.iml
 
 api/wp-content/languages/plugins/akismet-de_DE.po
+
+api/composer.lock
